@@ -14,7 +14,7 @@ function canConstructWord(word, letters) {
   for (const char in wordFreq) {
     //if the val of the char is greater than val of char in letters
     //OR if the char val is NOT in letters
-    if (wordFreq[char] > lettersFreq[char] || !(char in lettersFreq)) {
+    if (!(char in lettersFreq) || wordFreq[char] > lettersFreq[char]) {
       //return false
       return false;
     }
